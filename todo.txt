@@ -1,2 +1,3 @@
-- Make seperate file for header and footer
++ Make seperate file for header and footer
+- Pre populate text in registration
 
