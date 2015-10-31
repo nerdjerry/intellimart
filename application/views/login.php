@@ -26,7 +26,8 @@
 
 <body>
 	<header id="header"><!--header-->
-		<div class="header_top"><!--header_top-->
+		<!--TODO:Hide it or delete it if not reqd
+		<div class="header_top"><!--header_top
 			<div class="container">
 				<div class="row">
 					<div class="col-sm-6">
