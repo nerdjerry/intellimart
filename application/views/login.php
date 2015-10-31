@@ -22,7 +22,7 @@
 				<div class="col-sm-4">
 					<div class="signup-form"><!--sign up form-->
 						<h2>New User Signup!</h2>
-						<form action="#">
+						<?php echo form_open('login/register');?>
 							<input type="text" placeholder="Name"/>
 							<input type="email" placeholder="Email Address"/>
 							<input type="password" placeholder="Password"/>
