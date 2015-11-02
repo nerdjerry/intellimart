@@ -13,10 +13,10 @@ class User extends CI_Model{
 		$data['last_name']=ucfirst($last);
 		$data['email_id']=$this->input->post('email');
 		$data['mobile_no']=$this->input->post('mobile');
-		if($this->db->where('email_id',$data['email_id'])){
+		if(($this->db->where('email_id',$data['email_id']))->num_rows>0){
 			return "Email Id already registered";
 		}
-		elseif($this->db->where('mobile_no',$data['mobile_no'])){
+		elseif(($this->db->where('mobile_no',$data['mobile_no']))->num_rows>0){
 			return "Mobile number already registered";
 		}
 		$data['password']=md5($this->input->post('password'));
