@@ -25,7 +25,7 @@
 						<?php echo form_open('login/register');?>
 							<input type="text" name="name" placeholder="Name"/>
 							<input type="email" name="email" placeholder="Email Address"/>
-							<input type="number" name="mobile" placeholder="Phone Number"/>
+							<input type="text" name="mobile" placeholder="Phone Number"/>
 							<input type="password" name="password" placeholder="Password"/>
 							<button type="submit" class="btn btn-default">Signup</button>
 						</form>
