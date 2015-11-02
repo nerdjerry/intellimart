@@ -16,7 +16,7 @@ class User extends CI_Model{
 		if($this->db->where('email_id',$data['email_id'])){
 			return "Email Id already registered";
 		}
-		if else($this->db->where('mobile_no',$data['mobile_no'])){
+		elseif($this->db->where('mobile_no',$data['mobile_no'])){
 			return "Mobile number already registered";
 		}
 		$data['password']=md5($this->input->post('password'));
