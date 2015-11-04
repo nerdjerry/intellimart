@@ -5,7 +5,7 @@
 				<div class="col-sm-4 col-sm-offset-1">
 					<div class="login-form"><!--login form-->
 						<h2>Login to your account</h2>
-						<?php echo form_open('login/login');?>
+						<?php echo form_open('login/signin');?>
 							<input type="email" name="email" placeholder="Email Address" />
 							<input type="password" name="password" placeholder="Password"/>
 							<!--<span>
