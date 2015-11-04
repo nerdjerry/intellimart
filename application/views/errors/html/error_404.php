@@ -1,4 +1,4 @@
-<?php require_once('../../helpers/header.php');?>
+<?php require_once('helpers/header.php');?>
 
 <body>
 	<div class="container text-center">
@@ -12,4 +12,4 @@
 			<h2><a href="<?php echo site_url();?>">Bring me back Home</a></h2>
 		</div>
 	</div>
-<?php require_once('../../helpers/footer.php');
+<?php require_once('helpers/footer.php');
