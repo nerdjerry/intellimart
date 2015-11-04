@@ -1,4 +1,4 @@
-<?php require_once('helpers/header.php');?>
+<?php require_once('templates/header.php');?>
 	<section id="slider"><!--slider-->
 		<div class="container">
 			<div class="row">
@@ -755,4 +755,4 @@
 		</div>
 	</section>
 	
-<?php require_once('helpers/footer.php');?>
+<?php require_once('templates/footer.php');?>
