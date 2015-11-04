@@ -4,6 +4,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 class User extends CI_Model{
 	public function __construct(){
 		$this->load->database();
+		$this->load->helper('url');
 	}
 	private function exists($columnName,$data){
 		$this->db->where($columnName,$data);
@@ -11,7 +12,6 @@ class User extends CI_Model{
 		return $query->num_rows()>0;
 	}
 	public function register(){
-		$this->load->helper('url');
 		$inputName=$this->input->post('name');
 		list($first,$last)=explode(" ",$inputName);
 		$data['first_name']=ucfirst($first);
