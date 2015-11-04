@@ -5,13 +5,13 @@
 				<div class="col-sm-4 col-sm-offset-1">
 					<div class="login-form"><!--login form-->
 						<h2>Login to your account</h2>
-						<form action="#">
-							<input type="text" placeholder="Name" />
-							<input type="email" placeholder="Email Address" />
-							<span>
-								<input type="checkbox" class="checkbox">
+						<?php echo form_open('login/login');?>
+							<input type="email" name="email" placeholder="Email Address" />
+							<input type="password" name="password" placeholder="Password"/>
+							<!--<span>
+								<input type="checkbox" name="issigned" class="checkbox">
 								Keep me signed in
-							</span>
+							</span>-->
 							<button type="submit" class="btn btn-default">Login</button>
 						</form>
 					</div><!--/login form-->
@@ -34,4 +34,4 @@
 			</div>
 		</div>
 	</section><!--/form-->
-<?php require_once('templates'/footer.php');?>
+<?php require_once('templates/footer.php');?>
