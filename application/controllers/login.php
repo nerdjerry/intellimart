@@ -15,12 +15,13 @@ class Login extends CI_Controller{
 		}
 		else{
 			$this->load->model('user');
-			if($errorMessage=$this->user->register()){
+			if($errorMessage=$this->user->register()==1){
+							//TODO:create session and login user.
+			}
+			elseif($errorMessage=$this->user->register()){
 				$message = "Please refill for with apt details";
 				show_error($message,0,$errorMessage);
 			}
-			//TODO:create session and login user.
-
 		}
 	}
 }
