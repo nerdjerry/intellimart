@@ -1,4 +1,7 @@
-<?php require_once('helpers/header.php');?>
+<?php
+	$CI= &get_instance();
+	$CI->load->view('templates/header.php');
+?>
 
 <body>
 	<div class="container text-center">
@@ -12,4 +15,7 @@
 			<h2><a href="<?php echo site_url();?>">Bring me back Home</a></h2>
 		</div>
 	</div>
-<?php require_once('helpers/footer.php');
+<?php
+	$CI= &get_instance();
+	$CI->load->view('templates/footer.php');
+?>
