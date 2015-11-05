@@ -64,10 +64,16 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-user"></i> Account</a></li>
+								<?php if(isset($_SESSION['name'])){
+									echo "<li><a href='#'><i class='fa fa-user'></i> Hi,".$this->session->name."</a></li>";
+								}?>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
 								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
-								<li><?php echo anchor("home/login","Login");?></li>
+								<?php if($this->session->logged){
+									echo "<li>".anchor("home/logout","Logout")."</li>";
+								}else{
+									echo "<li>".anchor("home/login","Login")."</li>";
+								}?>
 							</ul>
 						</div>
 					</div>
