@@ -17,7 +17,7 @@ class User extends CI_Model{
 		$this->db->where('email_id',$data['email']);
 		$this->db->where('password',$data['password']);
 		$query=$this->db->get('users');
-		return $query->result();
+		return $query->row();
 	}
 	public function register(){
 		$inputName=$this->input->post('name');
