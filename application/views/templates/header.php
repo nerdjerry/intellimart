@@ -64,7 +64,7 @@
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-								<?php if(isset($_SESSION['name'])){
+								<?php if($this->session->logged){
 									echo "<li><a href='#'><i class='fa fa-user'></i> Hi,".$this->session->name."</a></li>";
 								}?>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
