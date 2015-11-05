@@ -33,7 +33,10 @@ class User extends CI_Model{
 		elseif($this->exists('mobile_no',$data['mobile_no'])){
 			return "Mobile number already registered";
 		}else{
-			return $this->db->insert('users',$data);
+			$this->db->insert('users',$data);
+			$this->db->where('email_id',$data['email_id']);
+			$query=$this->db->get('users');
+			return $query->row();
 		}
 
 	}
