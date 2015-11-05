@@ -11,6 +11,14 @@ class User extends CI_Model{
 		$query=$this->db->get('users');
 		return $query->num_rows()>0;
 	}
+	public function login(){
+		$data['email']=$this->input->post('email');
+		$data['password']=md5($this->input->post('password'));
+		$this->db->where('email_id',$data['email']);
+		$this->db->where('password',$data['password']);
+		$query=$this->db->get('users');
+		return $query->result();
+	}
 	public function register(){
 		$inputName=$this->input->post('name');
 		list($first,$last)=explode(" ",$inputName);
