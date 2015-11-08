@@ -1,4 +1,5 @@
 + Make seperate file for header and footer
 - Pre populate text in registration
 - Create proper views for errors
+- Add keep me signed in functionality to login
 

@@ -19,13 +19,19 @@ class Login extends CI_Controller{
 		$this->form_validation->set_rules('password','Password','required');
 		if($this->form_validation->run()===FALSE){
 			$errorMessage = "Incorrect details";
-			$message="Please enter correct login details";
+			$message="Please enter all the login details";
 			show_error($message,0,$errorMessage);
 		}else{
 			$this->load->model('user');
 			$user=$this->user->login();
-			$this->create_session($user);
-			$this->load->view('index.php');
+			if($user!=NULL){
+				$this->create_session($user);
+				$this->load->view('index.php');
+			}else{
+				$errorMessage="Incorrect details";
+				$message="Please correct detials,or your email is not registered";
+				show_error($message,0,$errorMessage);
+			}
 		}
 	}
 
