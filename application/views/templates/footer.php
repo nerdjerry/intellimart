@@ -130,7 +130,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-sm-3 col-sm-offset-1">
+					<!--<div class="col-sm-3 col-sm-offset-1">
 						<div class="single-widget">
 							<h2>About Shopper</h2>
 							<form action="#" class="searchform">
@@ -139,7 +139,7 @@
 								<p>Get the most recent updates from <br />our site and be updated your self...</p>
 							</form>
 						</div>
-					</div>
+					</div>-->
 
 				</div>
 			</div>
