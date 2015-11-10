@@ -86,17 +86,13 @@
 						<div class="single-widget">
 							<h2>Service</h2>
 							<ul class="nav nav-pills nav-stacked">
-								<li><a href="#">Online Help</a></li>
 								<li><a href="#">Contact Us</a></li>
-								<li><a href="#">Order Status</a></li>
-								<li><a href="#">Change Location</a></li>
-								<li><a href="#">FAQ’s</a></li>
 							</ul>
 						</div>
 					</div>
 					<div class="col-sm-2">
 						<div class="single-widget">
-							<h2>Quock Shop</h2>
+							<h2>Quick Shop</h2>
 							<ul class="nav nav-pills nav-stacked">
 								<li><a href="#">T-Shirt</a></li>
 								<li><a href="#">Mens</a></li>
@@ -106,7 +102,7 @@
 							</ul>
 						</div>
 					</div>
-					<div class="col-sm-2">
+					<!--<div class="col-sm-2">
 						<div class="single-widget">
 							<h2>Policies</h2>
 							<ul class="nav nav-pills nav-stacked">
@@ -117,7 +113,7 @@
 								<li><a href="#">Ticket System</a></li>
 							</ul>
 						</div>
-					</div>
+					</div>-->
 					<div class="col-sm-2">
 						<div class="single-widget">
 							<h2>About Shopper</h2>
