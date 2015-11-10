@@ -1,9 +1,9 @@
 <?php require_once('templates/header.php');?>
-	<section id="slider"><!--slider-->
+	<!--<section id="slider">--slider
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
-					<div id="slider-carousel" class="carousel slide" data-ride="carousel">
+					<!--<div id="slider-carousel" class="carousel slide" data-ride="carousel">
 						<ol class="carousel-indicators">
 							<li data-target="#slider-carousel" data-slide-to="0" class="active"></li>
 							<li data-target="#slider-carousel" data-slide-to="1"></li>
@@ -19,8 +19,8 @@
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="<?php echo base_url('assets/images/home/girl1.jpg');?>" class="girl img-responsive" alt="" />
-									<img src="<?php echo base_url('assets/images/home/pricing.png');?>"  class="pricing" alt="" />
+									<img src="\?php echo base_url('assets/images/home/girl1.jpg');?>" class="girl img-responsive" alt="" />
+									<img src="\?php echo base_url('assets/images/home/pricing.png');?>"  class="pricing" alt="" />
 								</div>
 							</div>
 							<div class="item">
@@ -31,8 +31,8 @@
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="<?php echo base_url('assets/images/home/girl2.jpg');?>" class="girl img-responsive" alt="" />
-									<img src="<?php echo base_url('assets/images/home/pricing.png');?>"  class="pricing" alt="" />
+									<img src="\?php echo base_url('assets/images/home/girl2.jpg');?>" class="girl img-responsive" alt="" />
+									<img src="\?php echo base_url('assets/images/home/pricing.png');?>"  class="pricing" alt="" />
 								</div>
 							</div>
 							
@@ -62,7 +62,7 @@
 				</div>
 			</div>
 		</div>
-	</section><!--/slider-->
+	</section><!--slider-->
 	
 	<section>
 		<div class="container">
