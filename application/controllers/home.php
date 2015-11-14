@@ -3,7 +3,10 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Home extends CI_Controller{
 	public function index(){
-		$this->load->view('index.php');
+		$this->load->model('product');
+		$data['categories']=$this->product->getCategory();
+		$data['brands']=$this->product->getBrand();
+		$this->load->view('index.php',$data);
 	}
 	public function login(){
 		$this->load->helper('form');
