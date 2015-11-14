@@ -112,7 +112,8 @@
 							</div>
 						</div><!--/brands_products-->
 						
-						<div class="price-range"><!--price-range-->
+						<!--Hide Price range bar
+						<div class="price-range"><!--price-range
 							<h2>Price Range</h2>
 							<div class="well text-center">
 								 <input type="text" class="span2" value="" data-slider-min="0" data-slider-max="600" data-slider-step="5" data-slider-value="[250,450]" id="sl2" ><br />
