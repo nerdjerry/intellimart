@@ -14,6 +14,7 @@ class Product extends CI_Model{
 	public function getBrand(){
 		$this->db->select('P_Brand');
 		$this->db->distinct();
+		$this->db->order_by('P_Brand','ASC');
 		$query=$this->db->get('products');
 		return $query->result();
 	}
