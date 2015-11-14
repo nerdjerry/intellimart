@@ -1,4 +1,3 @@
-<?php require_once('templates/header.php');?>
 	<section id="form"><!--form-->
 		<div class="container">
 			<div class="row">

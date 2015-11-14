@@ -1,5 +1,3 @@
-	<?php require_once('templates/header.php');?>
-	<!--<section id="slider">--slider
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">

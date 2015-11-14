@@ -8,10 +8,12 @@ class Home extends CI_Controller{
 		$data['brands']=$this->product->getBrand();
 	}
 	public function index(){
+		$this->load->view('templates/header.php',$data);
 		$this->load->view('index.php',$data);
 	}
 	public function login(){
 		$this->load->helper('form');
+		$this->load->view('templates/header.php',$data);
 		$this->load->view('login.php');
 	}
 	public function logout(){
