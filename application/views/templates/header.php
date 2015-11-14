@@ -98,10 +98,9 @@
 								<li><a href="<?php echo site_url('home')?>" class="active">Home</a></li>
 								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
 									<ul role="menu" class="sub-menu">
-										<li></li>
-										<li></li>
-										<li></li>
-										<li></li>
+										<?php foreach($categories as $category):?>
+										<li><a href="#"><?php echo $category->P_Cat;?></a></li>
+										<?php endforeach;?>
 									</ul>
                                 </li>
 								<!--<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a>
