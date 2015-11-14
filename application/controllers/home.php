@@ -6,12 +6,20 @@ class Home extends CI_Controller{
 	public function __construct(){
 		parent::__construct();
 	}
+
+	private function getData(&$data){
+		$this->load->model('product');
+		$data['categories']=$this->product->getCategory();
+		$data['brands']=$this->product->getBrand();
+	}
 	public function index(){
+		$this->getData($data);
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('index.php',$data);
 	}
 	public function login(){
 		$this->load->helper('form');
+		$this->getData($data);
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('login.php');
 	}
