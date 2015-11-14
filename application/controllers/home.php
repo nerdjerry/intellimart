@@ -2,10 +2,9 @@
 defined('BASEPATH') or exit('No direct script access allowed');
 
 class Home extends CI_Controller{
+
 	public function __construct(){
-		$this->load->model('product');
-		$data['categories']=$this->product->getCategory();
-		$data['brands']=$this->product->getBrand();
+		parent::__construct();
 	}
 	public function index(){
 		$this->load->view('templates/header.php',$data);
