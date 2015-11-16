@@ -93,7 +93,7 @@
 							<?php foreach($categories as $category):?>
 							<div class="panel panel-default">
 								<div class="panel-heading">
-									<h4 class="panel-title"><a href="#"><?php echo $category->name;?></a></h4>
+									<h4 class="panel-title"><a href="<?php echo site_url('display/category/'.$category->id);?>"><?php echo $category->name;?></a></h4>
 								</div>
 							</div>
 							<?php endforeach;?>

@@ -6,7 +6,6 @@ class Product extends CI_Model{
 		$this->load->database();
 	}
 	public function getCategory(){
-		$this->db->select('name');
 		$query=$this->db->get('categories');
 		return $query->result();
 	}
