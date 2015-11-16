@@ -11,10 +11,9 @@ class Product extends CI_Model{
 		return $query->result();
 	}
 	public function getBrand(){
-		$this->db->select('P_Brand');
-		$this->db->distinct();
-		$this->db->order_by('P_Brand','ASC');
-		$query=$this->db->get('products');
+		$this->db->select('name');
+		$this->db->order_by('name','ASC');
+		$query=$this->db->get('brands');
 		return $query->result();
 	}
 }
