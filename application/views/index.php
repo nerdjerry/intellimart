@@ -104,7 +104,7 @@
 							<div class="brands-name">
 								<ul class="nav nav-pills nav-stacked">
 									<?php foreach($brands as $brand):?>
-									<li><a href="#"><?php echo $brand->P_Brand;?></a></li>
+									<li><a href="#"><?php echo $brand->name;?></a></li>
 									<?php endforeach;?>
 								</ul>
 							</div>
