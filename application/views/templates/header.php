@@ -99,7 +99,7 @@
 								<li class="dropdown"><a href="#">Shop<i class="fa fa-angle-down"></i></a>
 									<ul role="menu" class="sub-menu">
 										<?php foreach($categories as $category):?>
-										<li><a href="#"><?php echo $category->name;?></a></li>
+										<li><a href="<?php echo site_url('display/category/'.$category->id);?>"><?php echo $category->name;?></a></li>
 										<?php endforeach;?>
 									</ul>
                                 </li>
