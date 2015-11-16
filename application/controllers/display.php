@@ -16,4 +16,13 @@ class Display extends CI_Controller{
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('shop.php',$data);
 	}
+
+	public function brand($brand){
+		$data['products']=$this->product->getProductsByBrand($brand);
+		$data['categories']=$this->product->getCategory();
+		$data['brands']=$this->product->getBrand();
+		$data['itemsClass']=$this->product->getBrandName($brand);
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('shop.php',$data);
+	}
 }

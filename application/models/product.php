@@ -10,7 +10,6 @@ class Product extends CI_Model{
 		return $query->result();
 	}
 	public function getBrand(){
-		$this->db->select('name');
 		$this->db->order_by('name','ASC');
 		$query=$this->db->get('brands');
 		return $query->result();
@@ -22,8 +21,20 @@ class Product extends CI_Model{
 		$result=$query->row();
 		return $result->name;
 	}
+	public function getBrandName($brand){
+		$this->db->select('name');
+		$this->db->where('id',$brand);
+		$query=$this->db->get('brands');
+		$result=$query->row();
+		return $result->name;
+	}
 	public function getProductsByCategory($category){
 		$this->db->where('P_Cat',$category);
+		$query=$this->db->get('products');
+		return $query->result();
+	}
+	public function getProductsByBrand($brand){
+		$this->db->where('P_Brand',$brand);
 		$query=$this->db->get('products');
 		return $query->result();
 	}

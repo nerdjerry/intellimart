@@ -19,7 +19,7 @@
 							<div class="brands-name">
 								<ul class="nav nav-pills nav-stacked">
 									<?php foreach($brands as $brand):?>
-									<li><a href="#"><?php echo $brand->name;?></a></li>
+									<li><a href="<?php echo site_url('display/brand/'.$brand->id);?>"><?php echo $brand->name;?></a></li>
 									<?php endforeach;?>
 								</ul>
 							</div>
