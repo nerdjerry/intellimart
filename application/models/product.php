@@ -6,9 +6,8 @@ class Product extends CI_Model{
 		$this->load->database();
 	}
 	public function getCategory(){
-		$this->db->select('P_Cat');
-		$this->db->distinct();
-		$query=$this->db->get('products');
+		$this->db->select('name');
+		$query=$this->db->get('categories');
 		return $query->result();
 	}
 	public function getBrand(){
