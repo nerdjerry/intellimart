@@ -32,7 +32,7 @@
 						<div class="col-sm-5">
 							<div class="view-product">
 								<img src="images/product-details/1.jpg" alt="" />
-								<h3>ZOOM</h3>
+								<!--<h3>ZOOM</h3>-->
 							</div>
 							<div id="similar-product" class="carousel slide" data-ride="carousel">
 
