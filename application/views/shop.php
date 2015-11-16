@@ -40,13 +40,13 @@
 										<p><?php echo $product->P_Name;?></p>
 										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 									</div>
-									<div class="product-overlay">
+									<!--<div class="product-overlay">
 										<div class="overlay-content">
 											<h2>&#8377;<?php echo $product->P_Price;?></h2>
 											<p><?php echo $product->P_Name;?></p>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 										</div>
-									</div>
+									</div>-->
 								</div>
 								<!--Hide this,can be used in future <div class="choose">
 									<ul class="nav nav-pills nav-justified">
