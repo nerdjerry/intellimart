@@ -16,4 +16,16 @@ class Product extends CI_Model{
 		$query=$this->db->get('brands');
 		return $query->result();
 	}
+	public function getCategoryName($category){
+		$this->db->select('name');
+		$this->db->where('id',$category);
+		$query=$this->db->get('categories');
+		$result=$query->row();
+		return $result->name;
+	}
+	public function getProductsByCategory($category){
+		$this->db->where('P_Cat',$category);
+		$query=$this->db->get('products');
+		return $query->result();
+	}
 }
