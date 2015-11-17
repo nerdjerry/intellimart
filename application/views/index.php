@@ -571,8 +571,8 @@
 							</div>
 						</div>
 					</div><!--/category-tab-->
-					
-					<div class="recommended_items"><!--recommended_items-->
+					<!-- Hide recommended items
+					<div class="recommended_items"><!--recommended_items
 						<h2 class="title text-center">recommended items</h2>
 						
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
