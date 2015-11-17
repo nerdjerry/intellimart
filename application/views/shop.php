@@ -35,7 +35,7 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 									<div class="productinfo text-center">
-										<a href="#">
+										<a href="<?php echo site_url('display/product/'.$product->P_Id);?>">
 											<img src="images/shop/product12.jpg" alt="" />
 											<h2>&#8377;<?php echo $product->P_Price;?></h2>
 											<p><?php echo $product->P_Name;?></p></a>
