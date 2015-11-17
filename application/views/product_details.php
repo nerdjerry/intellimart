@@ -69,8 +69,8 @@
 							<div class="product-information"><!--/product-information-->
 								<img src="images/product-details/new.jpg" class="newarrival" alt="" />
 								<h2>Anne Klein Sleeveless Colorblock Scuba</h2>
-								<p>Web ID: 1089772</p>
-								<img src="images/product-details/rating.png" alt="" />
+								<!-- Hide rating
+								<img src="images/product-details/rating.png" alt="" />-->
 								<span>
 									<span>US $59</span>
 									<label>Quantity:</label>
