@@ -52,4 +52,10 @@ class Product extends CI_Model{
 		$result=$query->row();
 		return $result->P_Stock;
 	}
+
+	public function getSomeProducts(){
+		$this->db->limit(6);
+		$query=$this->db->get('products');
+		return $query->result();
+	}
 }
