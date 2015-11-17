@@ -67,12 +67,13 @@
 						</div>
 						<div class="col-sm-7">
 							<div class="product-information"><!--/product-information-->
-								<img src="images/product-details/new.jpg" class="newarrival" alt="" />
-								<h2>Anne Klein Sleeveless Colorblock Scuba</h2>
+								<!--<img src="images/product-details/new.jpg" class="newarrival" alt="" />-->
+								<h2><?php echo $product->P_Name;?></h2>
+								<h4><?php echo $productCategory;?></h3>
 								<!-- Hide rating
 								<img src="images/product-details/rating.png" alt="" />-->
 								<span>
-									<span>US $59</span>
+									<span>&#8377;<?php echo $product->P_Price;?></span>
 									<label>Quantity:</label>
 									<input type="text" value="3" />
 									<button type="button" class="btn btn-fefault cart">
@@ -80,8 +81,10 @@
 										Add to cart
 									</button>
 								</span>
-								<p><b>Availability:</b> In Stock</p>
-								<p><b>Brand:</b> E-SHOPPER</p>
+								<p><b>Availability:</b> <?php echo $isStock;?></p>
+								<?php if(isset($productBrand)):?>
+								<p><b>Brand:</b><?php echo $productBrand;?></p>
+								<?php endif;?>
 								<!--Hide social links
 								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a>-->
 							</div><!--/product-information-->
@@ -92,63 +95,15 @@
 						<div class="col-sm-12">
 							<ul class="nav nav-tabs">
 								<li class="active"><a href="#details" data-toggle="tab">Details</a></li>
-								<li><a href="#companyprofile" data-toggle="tab">Company Profile</a></li>
-								<li><a href="#tag" data-toggle="tab">Tag</a></li>
-								<li ><a href="#reviews" data-toggle="tab">Reviews (5)</a></li>
 							</ul>
 						</div>
 						<div class="tab-content">
-							<div class="tab-pane fade" id="details" >
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery1.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery2.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery3.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-sm-3">
-									<div class="product-image-wrapper">
-										<div class="single-products">
-											<div class="productinfo text-center">
-												<img src="images/home/gallery4.jpg" alt="" />
-												<h2>$56</h2>
-												<p>Easy Polo Black Edition</p>
-												<button type="button" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</button>
-											</div>
-										</div>
-									</div>
+							<div class="tab-pane fade active in" id="details" >
+								<div class="col-sm-12">
+									<p><?php echo $product->P_Desc;?></p>
 								</div>
 							</div>
-							<!-- Hide reviews
+							<!-- Hide review
 							<div class="tab-pane fade active in" id="reviews" >
 								<div class="col-sm-12">
 									<ul>
@@ -171,7 +126,7 @@
 										</button>
 									</form>
 								</div>
-							</div> End hiding-->
+							</div>-->
 
 						</div>
 					</div><!--/category-tab-->

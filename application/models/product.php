@@ -38,4 +38,18 @@ class Product extends CI_Model{
 		$query=$this->db->get('products');
 		return $query->result();
 	}
+
+	public function getProduct($product){
+		$this->db->where('P_Id',$product);
+		$query=$this->db->get('products');
+		return $query->row();
+	}
+
+	public function isStock($product){
+		$this->db->select('P_Stock');
+		$this->db->where('P_Id',$product);
+		$query=$this->db->get('products');
+		$result=$query->row();
+		return $result->P_Stock;
+	}
 }

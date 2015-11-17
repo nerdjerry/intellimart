@@ -25,4 +25,21 @@ class Display extends CI_Controller{
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('shop.php',$data);
 	}
+
+	public function product($productid){
+		$product=$this->product->getProduct($productid);
+		$data['product']=$product;
+		$data['categories']=$this->product->getCategory();
+		$data['brands']=$this->product->getBrand();
+		if($this->product->isStock($productid)){
+			$data['isStock']='In Stock';
+		}else{
+			$data['isStock']="Out of Stock";
+		}
+		$data['productCategory']=$this->product->getCategoryName($product->P_Cat);
+		if($product->P_Brand!=null)
+			$data['productBrand']=$this->product->getBrandName($product->P_Brand);
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('product_details.php',$data);
+	}
 }
