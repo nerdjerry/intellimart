@@ -124,7 +124,7 @@
 							<li>Total <span>&#8377;<?php echo 1.1*$total;?></span></li>
 						</ul>
 							<!--Hide option to update cart<a class="btn btn-default update" href="">Update</a>-->
-							<a class="btn btn-default check_out" href="">Check Out</a>
+							<a class="btn btn-default check_out" href="<?php echo site_url('cart/checkout');?>">Check Out</a>
 					</div>
 				</div>
 			</div>

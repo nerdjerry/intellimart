@@ -60,6 +60,7 @@ class Cart extends CI_Controller{
 			$userId = get_cookie("userId");
 		$this->getCartDetails($userId,$data);
 		$this->getHeaderData($data);
+		$this->load->helper('form');
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('checkout.php',$data);
 	}
