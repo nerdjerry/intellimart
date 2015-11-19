@@ -26,7 +26,7 @@ class Login extends CI_Controller{
 			$user=$this->user->login();
 			if($user!=NULL){
 				$this->create_session($user);
-				$this->load->view('index.php');
+				redirect('home');
 			}else{
 				$errorMessage="Incorrect details";
 				$message="Please correct detials,or your email is not registered";
@@ -51,7 +51,7 @@ class Login extends CI_Controller{
 			if(!is_string($data)){
 				$user=$data;//Since data is not a string,it contains user details.
 				$this->create_session($user);
-				$this->load->view('index.php');
+				redirect('home');
 			}
 			else{//As data is a string that means it doesnot contain data but contains error message
 				$message = "Please refill for with apt details";
