@@ -3,7 +3,28 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Shopping extends CI_Model{
 
+	private function checkItem($data){
+		$this->db->where('Session_Id',$data['Session_Id']);
+		$this->db->where('User_Id',$data['User_Id']);
+		$this->db->where('P_Id',$data['P_Id']);
+		$query = $this->db->get('cart');
+		return $query->num_rows()>0;
+	}
 	public function addItem($data){
-		$this->db->insert('cart',$data);
+		if($this->checkItem($data)){
+			$this->db->where('Session_Id',$data['Session_Id']);
+			$this->db->where('User_Id',$data['User_Id']);
+			$data['Quantity']+=1;
+			$this->db->update('cart',$data);
+		}else{
+			$this->db->insert('cart',$data);
+		}
+	}
+
+	public function getCart($userId){
+		$this->db->select('P_Id','Quantity','Amount');
+		$this->db('Session_Id',$userId);
+		$query = $this->db->get('cart');
+		return $query->result();
 	}
 }
