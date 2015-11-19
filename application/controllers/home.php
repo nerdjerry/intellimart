@@ -15,6 +15,12 @@ class Home extends CI_Controller{
 	public function index(){
 		$this->getData($data);
 		$data['products']=$this->product->getSomeProducts();
+		foreach($data['categories'] as $category){
+			$categoryName = $category->name;
+			$products = $this->product->getProductsByCategory($category->id,4);
+			$productsByCategory[$categoryName] = $products;
+		}
+		$data['productsByCategory']= $productsByCategory;
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('index.php',$data);
 	}

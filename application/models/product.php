@@ -28,7 +28,10 @@ class Product extends CI_Model{
 		$result=$query->row();
 		return $result->name;
 	}
-	public function getProductsByCategory($category){
+	public function getProductsByCategory($category,$limit=NULL){
+		if($limit!=NULL){
+			$this->db->limit($limit);
+		}
 		$this->db->where('P_Cat',$category);
 		$query=$this->db->get('products');
 		return $query->result();
