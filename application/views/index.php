@@ -69,7 +69,7 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img src="images/home/gallery1.jpg" alt="" />
-													<h2><?php echo $product->P_Price;?></h2>
+													<h2>&#8377;<?php echo $product->P_Price;?></h2>
 													<p><?php echo $product->P_Name;?></p>
 													<a href="<?php echo site_url('cart/addToCart/'.$product->P_Id);?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 												</div>
@@ -87,7 +87,7 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img src="images/home/gallery1.jpg" alt="" />
-													<h2><?php echo $product->P_Price;?></h2>
+													<h2>&#8377;<?php echo $product->P_Price;?></h2>
 													<p><?php echo $product->P_Name;?></p>
 													<a href="<?php echo site_url('cart/addToCart/'.$product->P_Id);?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 												</div>
