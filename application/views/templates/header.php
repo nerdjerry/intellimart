@@ -68,7 +68,7 @@
 									echo "<li><a href='#'><i class='fa fa-user'></i> Hi,".$this->session->name."</a></li>";
 								}?>
 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="<?php echo site_url('cart/showCart');?>"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<?php if($this->session->logged){
 									echo "<li>".anchor("home/logout","Logout")."</li>";
 								}else{
