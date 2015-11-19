@@ -9,11 +9,17 @@ class Cart extends CI_Controller{
 		$this->load->helper('cookie');
 	}
 
-	private function getData(&$data){
+	private function getHeaderData(&$data){
 		$data['categories']=$this->product->getCategory();
 		$data['brands']=$this->product->getBrand();
 	}
-
+	private function getCartDetails($userId,&$data){
+		$data['cart'] = $this->shopping->getCart($userId);
+		foreach($data['cart'] as $cartItem){
+			$productId=$cartItem->P_Id;
+			$data['products'][$productId]=$this->product->getProduct($cartItem->P_Id);
+		}
+	}
 	public function addToCart($product){
 		$data['Session_Id']=session_id();
 		$data['User_Id']=null;
@@ -39,13 +45,22 @@ class Cart extends CI_Controller{
 		}else{
 			$userId = get_cookie("userId");
 		}
-		$data['cart'] = $this->shopping->getCart($userId);
-		foreach($data['cart'] as $cartItem){
-			$productId=$cartItem->P_Id;
-			$data['products'][$productId]=$this->product->getProduct($cartItem->P_Id);
-		}
-		$this->getData($data);
+		$this->getCartDetails($userId,$data);
+		$this->getHeaderData($data);
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('cart.php',$data);
+	}
+
+	public function checkout(){
+		if(isset($_SESSION['logged'])){
+			$this->load->model('user');
+			$userId = $_SESSION['id'];
+			$data['user']=$this->user->getUser($userId);
+		}else
+			$userId = get_cookie("userId");
+		$this->getCartDetails($userId,$data);
+		$this->getHeaderData($data);
+		$this->load->view('templates/header.php',$data);
+		$this->load->view('checkout.php',$data);
 	}
 }
