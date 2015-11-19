@@ -49,6 +49,13 @@
 							</td>-->
 						</tr>
 						<?php endforeach;?>
+						<tr>
+							<td>
+								<?php if(isset($noItem) && $noItem)
+									echo "<p>No Items in Cart,Buy Some</p>"
+								?>
+							</td>
+						</tr>
 					</tbody>
 				</table>
 			</div>
