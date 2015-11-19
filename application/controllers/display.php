@@ -39,6 +39,7 @@ class Display extends CI_Controller{
 		$data['productCategory']=$this->product->getCategoryName($product->P_Cat);
 		if($product->P_Brand!=null)
 			$data['productBrand']=$this->product->getBrandName($product->P_Brand);
+		$this->load->helper('form');
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('product_details.php',$data);
 	}
