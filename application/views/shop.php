@@ -39,7 +39,7 @@
 											<img src="images/shop/product12.jpg" alt="" />
 											<h2>&#8377;<?php echo $product->P_Price;?></h2>
 											<p><?php echo $product->P_Name;?></p></a>
-										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
+										<a href="<?php echo site_url('cart/addToCart/'.$product->P_Id);?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>Add to cart</a>
 									</div>
 									<!--<div class="product-overlay">
 										<div class="overlay-content">
