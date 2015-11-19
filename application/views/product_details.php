@@ -75,11 +75,13 @@
 								<span>
 									<span>&#8377;<?php echo $product->P_Price;?></span>
 									<label>Quantity:</label>
-									<input type="text" value="3" />
-									<button type="button" class="btn btn-fefault cart">
-										<i class="fa fa-shopping-cart"></i>
-										Add to cart
-									</button>
+										<?php echo form_open('cart/addToCart/'.$product->P_Id);?>
+											<input type="number" name="quantity" value="1" />
+											<button type="submit" class="btn btn-default cart">
+												<i class="fa fa-shopping-cart"></i>
+												Add to cart
+											</button>
+										</form>
 								</span>
 								<p><b>Availability:</b> <?php echo $isStock;?></p>
 								<?php if(isset($productBrand)):?>
