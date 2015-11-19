@@ -31,7 +31,7 @@
 					<div class="product-details"><!--product-details-->
 						<div class="col-sm-5">
 							<div class="view-product">
-								<img src="images/product-details/1.jpg" alt="" />
+								<img src="<?php echo base_url($product->P_Img);?>" alt="" />
 								<!--<h3>ZOOM</h3>-->
 							</div>
 							<!-- Hide similar product carousel
@@ -72,7 +72,7 @@
 								<h4><?php echo $productCategory;?></h3>
 								<!-- Hide rating
 								<img src="images/product-details/rating.png" alt="" />-->
-								<span>
+								<span style="width:100%">
 									<span>&#8377;<?php echo $product->P_Price;?></span>
 									<label>Quantity:</label>
 										<?php echo form_open('cart/addToCart/'.$product->P_Id);?>
