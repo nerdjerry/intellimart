@@ -19,8 +19,11 @@
 						</tr>
 					</thead>
 					<tbody>
+						<?php $total=0;?>
 						<?php foreach($cart as $cartItem):?>
-						<?php $productId=$cartItem->P_Id;?>
+						<?php $productId=$cartItem->P_Id;
+							  $total+=$cartItem->Amount;
+						?>
 						<tr>
 							<td class="cart_product">
 								<a href=""><img src="<?php echo base_url($products[$productId]->P_Img)?>" alt=""></a>
@@ -55,11 +58,10 @@
 	<section id="do_action">
 		<div class="container">
 			<div class="heading">
-				<h3>What would you like to do next?</h3>
-				<p>Choose if you have a discount code or reward points you want to use or would like to estimate your delivery cost.</p>
+				<h3>Proceed to checkout?</h3>
 			</div>
 			<div class="row">
-				<div class="col-sm-6">
+				<!--Hide option for coupons<div class="col-sm-6">
 					<div class="chose_area">
 						<ul class="user_option">
 							<li>
@@ -112,16 +114,16 @@
 						<a class="btn btn-default update" href="">Get Quotes</a>
 						<a class="btn btn-default check_out" href="">Continue</a>
 					</div>
-				</div>
+				</div>-->
 				<div class="col-sm-6">
 					<div class="total_area">
 						<ul>
-							<li>Cart Sub Total <span>$59</span></li>
-							<li>Eco Tax <span>$2</span></li>
+							<li>Cart Sub Total <span>&#8377;<?php echo $total;?></span></li>
+							<li>Service Charge(10%) <span>&#8377;<?php echo 0.1*$total;?></span></li>
 							<li>Shipping Cost <span>Free</span></li>
-							<li>Total <span>$61</span></li>
+							<li>Total <span>&#8377;<?php echo 1.1*$total;?></span></li>
 						</ul>
-							<a class="btn btn-default update" href="">Update</a>
+							<!--Hide option to update cart<a class="btn btn-default update" href="">Update</a>-->
 							<a class="btn btn-default check_out" href="">Check Out</a>
 					</div>
 				</div>
