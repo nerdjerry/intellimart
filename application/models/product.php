@@ -56,6 +56,13 @@ class Product extends CI_Model{
 		return $result->P_Stock;
 	}
 
+	public function getProductPrice($product){
+		$this->db->select('P_Price');
+		$this->db->where('P_Id',$product);
+		$query = $this->db->get('products');
+		$result = $query->row();
+		return $result->P_Price;
+	}
 	public function getSomeProducts(){
 		$this->db->limit(6);
 		$query=$this->db->get('products');
