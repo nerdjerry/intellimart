@@ -5,6 +5,7 @@ class Cart extends CI_Controller{
 	public function __construct(){
 		parent::__construct();
 		$this->load->model('shopping');
+		$this->load->helper('cookie');
 	}
 
 	public function addToCart($product){
@@ -20,6 +21,6 @@ class Cart extends CI_Controller{
 		$productPrice=$this->product->getProductPrice($product);
 		$data['Amount'] = $quantity*$productPrice;
 		$this->shopping->addItem($data);
-
+		set_cookie("userId",$data['Session_Id'],60*60*24*3);
 	}
 }
