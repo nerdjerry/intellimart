@@ -48,7 +48,7 @@
 								<?php if(isset($user)):?>
 								<?php echo form_open('cart/complete')?>
 									<input type="text" name="name" value="<?php echo $user->first_name." ".$user->last_name;?>" required>
-									<input type="text" name="emailid" value="<?php echo $user->email_id;?>" required>
+									<input type="email" name="emailid" value="<?php echo $user->email_id;?>" required>
 									<input type="text" name="address1" placeholder="Address 1" required>
 									<input type="text" name="address2" placeholder="Address 2">
 									<input type="text" name="mobile" value="<?php echo $user->mobile_no;?>" required>
@@ -57,7 +57,7 @@
 								<?php else:?>
 								<?php echo form_open('cart/complete')?>
 									<input type="text" name="name" placeholder="Your Name">
-									<input type="text" name="emailid" placeholder="Your Email Id">
+									<input type="email" name="emailid" placeholder="Your Email Id">
 									<input type="text" name="address1" placeholder="Address 1">
 									<input type="text" name="address2" placeholder="Address 2">
 									<input type="text" name="mobile" placeholder="Mobile Number">
