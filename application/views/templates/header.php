@@ -114,7 +114,9 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="search_box pull-right">
-							<input type="text" placeholder="Search"/>
+							<?php echo form_open('display/search');?>
+							<input type="text" name="search" placeholder="Search"/>
+							</form>
 						</div>
 					</div>
 				</div>

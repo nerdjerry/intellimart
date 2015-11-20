@@ -46,4 +46,17 @@ class Display extends CI_Controller{
 		$this->load->view('product_details.php',$data);
 		$this->load->view('templates/footer.php',$data);
 	}
+
+	public function search(){
+		if($this->input->post('search')!=null){
+			$search = $this->input->post('search');
+			$data['products']=$this->product->getSearchedProduct($search);
+			$data['itemsClass'] = "Searched Items";
+			$data['categories']=$this->product->getCategory();
+			$data['brands']=$this->product->getBrand();
+			$this->load->view('templates/header.php',$data);
+			$this->load->view('shop.php',$data);
+			$this->load->view('templates/footer.php',$data);
+		}
+	}
 }

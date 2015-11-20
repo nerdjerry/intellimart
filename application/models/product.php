@@ -68,4 +68,12 @@ class Product extends CI_Model{
 		$query=$this->db->get('products');
 		return $query->result();
 	}
+
+	public function getSearchedProduct($search){
+		$this->db->or_like('P_Name',$search);
+		$this->db->or_like('P_Brand',$search);
+		$this->db->or_like('P_Cat',$search);
+		$query = $this->db->get('products');
+		return $query->result();
+	}
 }
