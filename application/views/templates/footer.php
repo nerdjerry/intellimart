@@ -95,7 +95,7 @@
 							<h2>Quick Shop</h2>
 							<ul class="nav nav-pills nav-stacked">
 								<?php foreach($categories as $category):?>
-									<li><a href="<?php site_url('display/category'.$cateegory->id);?>"><?php echo $cateegory->name;?></a></li>
+									<li><a href="<?php site_url('display/category'.$category->id);?>"><?php echo $category->name;?></a></li>
 								<?php endforeach;?>
 							</ul>
 						</div>
