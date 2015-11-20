@@ -23,12 +23,14 @@ class Home extends CI_Controller{
 		$data['productsByCategory']= $productsByCategory;
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('index.php',$data);
+		$this->load->view('templates/footer.php',$data);
 	}
 	public function login(){
 		$this->load->helper('form');
 		$this->getData($data);
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('login.php');
+		$this->load->view('templates/footer.php',$data);
 	}
 	public function logout(){
 		$array=array('id','name','access','logged');

@@ -46,9 +46,12 @@ class Cart extends CI_Controller{
 			$userId = get_cookie("userId");
 		}
 		$this->getCartDetails($userId,$data);
+		if($data['cart']==null)
+			$data['noItem']=true;
 		$this->getHeaderData($data);
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('cart.php',$data);
+		$this->load->view('templates/footer.php',$data);
 	}
 
 	public function checkout(){
@@ -63,5 +66,16 @@ class Cart extends CI_Controller{
 		$this->load->helper('form');
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('checkout.php',$data);
+		$this->load->view('templates/footer.php',$data);
+	}
+
+	public function complete(){
+		$name = $this->input->post('name');
+		$emailId = $this->input->post('emailid');
+		$address1 = $this->input->post('address1');
+		if($this->input->post('address2')!=null){
+			$address2 = $this->input->post('address2');
+		}
+		$mobile = $this->input->post('mobile');
 	}
 }

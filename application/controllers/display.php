@@ -15,6 +15,7 @@ class Display extends CI_Controller{
 		$data['itemsClass']=$this->product->getCategoryName($category);
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('shop.php',$data);
+		$this->load->view('templates/footer.php',$data);
 	}
 
 	public function brand($brand){
@@ -24,6 +25,7 @@ class Display extends CI_Controller{
 		$data['itemsClass']=$this->product->getBrandName($brand);
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('shop.php',$data);
+		$this->load->view('templates/footer.php',$data);
 	}
 
 	public function product($productid){
@@ -42,5 +44,6 @@ class Display extends CI_Controller{
 		$this->load->helper('form');
 		$this->load->view('templates/header.php',$data);
 		$this->load->view('product_details.php',$data);
+		$this->load->view('templates/footer.php',$data);
 	}
 }
