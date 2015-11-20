@@ -137,5 +137,3 @@
 			</div>
 		</div>
 	</section><!--/#do_action-->
-
-<?php require_once('templates/footer.php');?>

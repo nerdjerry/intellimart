@@ -33,4 +33,3 @@
 			</div>
 		</div>
 	</section><!--/form-->
-<?php require_once('templates/footer.php');?>

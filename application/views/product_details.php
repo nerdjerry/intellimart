@@ -229,4 +229,3 @@
 			</div>
 		</div>
 	</section>
-<?php require_once('templates/footer.php');?>

@@ -160,4 +160,3 @@
 			</div>
 		</div>
 	</section> <!--/#cart_items-->
-<?php require_once('templates/footer.php');?>
