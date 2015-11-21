@@ -76,7 +76,7 @@
 									<span>&#8377;<?php echo $product->P_Price;?></span>
 									<label>Quantity:</label>
 										<?php echo form_open('cart/addToCart/'.$product->P_Id);?>
-											<input type="number" name="quantity" value="1" min="1"/>
+											<input type="number" name="quantity" value="1" min="1" max="10"/>
 											<button type="submit" class="btn btn-default cart">
 												<i class="fa fa-shopping-cart"></i>
 												Add to cart
