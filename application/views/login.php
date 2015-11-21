@@ -24,7 +24,7 @@
 						<?php echo form_open('login/register');?>
 							<input type="text" name="name" placeholder="Name"/>
 							<input type="email" name="email" placeholder="Email Address"/>
-							<input type="text" name="mobile" placeholder="Phone Number"/>
+							<input type="text" name="mobile" placeholder="Phone Number" pattern="[0-9]{10}" title="Valid 10 digit mobile no" required/>
 							<input type="password" name="password" placeholder="Password"/>
 							<button type="submit" class="btn btn-default">Signup</button>
 						</form>
